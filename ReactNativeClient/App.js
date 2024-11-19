@@ -27,17 +27,19 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import { styles } from './IssueList';
 
-
-export default class App extends React.Component
-{
-  render()
-  {
-    return(
-    <>
-      <Text>Issue Tracker</Text>
-      <IssueList/>
-    </>);
-
+export default class App extends React.Component {
+  render() {
+    return (
+      <SafeAreaView style={styles.container}>
+        <View style={styles.navbar}>
+          <Text style={styles.navText}>Issue Tracker</Text>
+        </View>
+        <ScrollView>
+          <IssueList />
+        </ScrollView>
+      </SafeAreaView>
+    );
   }
 }
